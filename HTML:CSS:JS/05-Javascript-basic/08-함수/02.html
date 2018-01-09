@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+<script>
+// 변수의 유효 범위(Scope): 변수를 사용할 수 있는 범위.
+// 자바스크립트에서 변수의 유효 범위는 "함수 단위"로 결정됩니다.
+// 지역변수와 전역변수
+
+// 변수를 선언할 때 var을 안붙이면 전역변수가 됩니다. 주의!
+
+var a = '에이'; // 전역변수
+
+function aa () {
+    var a = 'aa함수 내부의 a';
+    var b = '비'; // 지역변수
+    console.log(a);
+
+    function bb () {
+        var c = '씨';
+        console.log(b);
+    }
+
+    bb();
+}
+
+aa();
+</script>
+</head>
+<body>
+<p>body에 작성한 내용</p>
+</body>
+</html>

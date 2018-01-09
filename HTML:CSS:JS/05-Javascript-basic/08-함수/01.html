@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+</head>
+<body>
+<p style="background: red">body에 작성한 내용</p>
+
+<script>
+// 함수: 특정한 기능을 가진 코드 덩어리. 이름을 지정해서 재사용 가능.
+function foo () {
+    console.log('foo() 실행');
+}
+// foo();
+
+function 더하기1 (a, b) {
+    // a, b는 함수의 매개변수(parameter)
+    console.log(a + b);
+}
+// 더하기1(1, 3);
+
+// return: 함수 종료(실행 시점으로 돌아감)
+function a1 () {
+    return;
+    alert('a1'); // 절대 실행 안됨
+}
+a1();
+
+function 더하기2 (a, b) {
+    return a + b;
+}
+// 더하기2();
+var 더하기2결과 = 더하기2(100, 30);
+console.log( 더하기2결과 );
+document.querySelector('p').style.height = 더하기2결과 + 'px';
+</script>
+
+</body>
+</html>

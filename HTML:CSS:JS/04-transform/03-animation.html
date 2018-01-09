@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="UTF-8">
+<style>
+body {
+    color: #fff;
+    background: #000;
+}
+input[type]:focus {
+    animation: doridori .5s infinite;
+    outline: 0;
+}
+
+@keyframes doridori {
+    0% {
+        box-shadow: rgba(0, 255, 255, .3) 0 0 20px;
+        transform: rotate(0) translate3d(-10px, 0, 0);
+    }
+
+    50% {
+        box-shadow: rgba(0, 255, 255, 1) 0 0 20px;
+        transform: rotate(360deg) translate3d(10px, 0, 0);
+    }
+
+    100% {
+        box-shadow: rgba(0, 255, 255, .3) 0 0 20px;
+        transform: rotate(0) translate3d(-10px, 0, 0);
+    }
+}
+</style>
+</head>
+<body>
+<h1>CSS3 Animation</h1>
+<form>
+	<div>
+		<input type="text" name="userid" placeholder="아이디">
+	</div>
+	<div>
+		<input type="password" name="userpasswd" placeholder="비밀번호">
+	</div>
+	<button>로그인</button>
+</form>
+</body>
+</html>
+
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+<style>
+body, button { font-size: 2rem; }
+</style>
+</head>
+<body>
+<p class="output">0</p>
+<button class="btn">버튼</button>
+
+<script>
+// 전역변수 사용은 최대한 지양하세요
+function jejudo () {
+
+    var total = 0; // 전역변수처럼 쓸 수 있는 지역변수
+
+    var btn = document.querySelector('.btn'),
+        output = document.querySelector('.output'); 
+
+    function clickHandler () {
+        total++;
+        // total = total + 1;
+        output.innerHTML = total;
+    }
+
+    btn.addEventListener('click', clickHandler);
+}
+
+jejudo();
+</script>
+</body>
+</html>
+
+

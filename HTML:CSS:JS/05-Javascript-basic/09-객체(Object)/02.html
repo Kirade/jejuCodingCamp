@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+<script>
+var person = {
+    myname: '김바보',
+    age: 80,
+    nationality: '대한민국',
+    introduce: function () {
+        console.log('안녕? 나는 ' + this.myname + '라고 해.');
+    }
+};
+// this는 메서드를 실행시킨 주체 객체를 가리킴
+
+var person2 = {
+    myname: '마이클',
+    age: 10,
+    nationality: '캐나다',
+    introduce: function () {
+        console.log('안녕? 나는 ' + this.myname + '라고 해.');
+    }
+};
+
+person.introduce();
+person2.introduce();
+</script>
+</head>
+<body>
+<p>body에 작성한 내용</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

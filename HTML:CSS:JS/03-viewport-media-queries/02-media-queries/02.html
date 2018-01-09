@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Responsive Web Design</title>
+<!-- 미디어 별로 css 적용하기 : 하나의 css에서 @media 블럭으로 -->
+<style>
+.all {
+    display: block;
+}
+.screen {
+    display: none;
+}
+.print {
+    display: none;
+}
+
+@media screen {
+    .screen {
+        display: block;
+    }
+}
+
+@media print {
+    .print {
+        display: block;
+    }
+}
+</style>
+</head>
+<body>
+<p class="all">이것은 모든 미디어에서 출력됩니다.</p>
+<p class="screen">이것은 스크린에서만 출력됩니다.</p>
+<p class="print">이것은 인쇄모드에서만 출력됩니다.</p>
+</body>
+</html>

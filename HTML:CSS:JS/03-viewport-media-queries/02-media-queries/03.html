@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Responsive Web Design</title>
+<!-- 다양한 조건의 미디어쿼리 테스트 -->
+<style>
+.screen,
+.print,
+.narrow,
+.normal,
+.wide,
+.portrait,
+.landscape,
+.high-resolution,
+.wide-aspect-ratio,
+.w800 {
+    display: none;
+}
+@media screen {
+    .screen {
+        display: block;
+    }
+}
+@media print {
+    .print {
+        display: block;
+    }
+    body {
+        font-family: serif; font-size: 5em; font-weight: bolder; letter-spacing: -0.1em;
+    }
+}
+@media screen and (width: 800px) {
+    .w800 {
+        display: block;
+    }
+}
+@media screen and (max-width: 600px) {
+    .narrow {
+        display: block;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 800px) {
+    .normal {
+        display: block;
+    }
+    body {
+        background-color: yellow;
+    }
+}
+@media screen and (min-width: 800px) {
+    .wide {
+        display: block;
+    }
+    body {
+        color: #fff;
+        background-color: green;
+    }
+}
+@media screen and (orientation: portrait) {
+    .portrait {
+        display: block;
+    }
+}
+@media screen and (orientation: landscape) {
+    .landscape {
+        display: block;
+    }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    .high-resolution {
+        display: block;
+    }
+}
+@media screen and (min-aspect-ratio: 3/2) {
+    .wide-aspect-ratio {
+        display: block;
+    }
+}
+</style>
+</head>
+<body>
+<p class="all">모든 미디어에서 표시되는 글</p>
+<p class="screen">스크린</p>
+<p class="print">인쇄모드</p>
+<p class="high-resolution">고해상도 디스플레이</p>
+<p class="narrow">좁은 폭 화면</p>
+<p class="normal">중간 폭 화면</p>
+<p class="wide">넓은 폭 화면</p>
+<p class="portrait">Portrait Mode</p>
+<p class="landscape">Landscape Mode</p>
+<p class="w800">폭 800픽셀</p>
+<p class="wide-aspect-ratio">와이드 스크린</p>
+</body>
+</html>

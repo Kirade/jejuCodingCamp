@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+<script>
+// new를 생략하고 호출하는 방법
+function Person (myname, age, nationality) {
+    if (!(this instanceof Person)) {
+        return new Person(myname, age, nationality);
+    }
+
+    this.myname = myname;
+    this.age = age;
+    this.nationality = nationality;
+    this.introduce = function () {
+        console.log('안녕? 내 이름은 ' + this.myname + '이고, ' + this.age + '살이야. 그리고 나는 ' + this.nationality + ' 사람이야.');
+    };
+}
+
+var p1 = Person('김바보', 13, '미국'); // 인스턴스(생성자로 만들어낸 객체)
+var p2 = Person('아키라', 3, '일본');
+p1.introduce();
+p2.introduce();
+</script>
+</head>
+<body>
+<p>body에 작성한 내용</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

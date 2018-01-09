@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="UTF-8">
+<style>
+body {
+	font-family: Helvetica, sans-serif;
+	background-color: #ddd;
+}
+div {
+	margin: 20px 0;
+}
+div:nth-of-type(2) {
+	display: inline-block;
+	padding: 10px;
+	background-color: #000;
+}
+a {
+	text-decoration: none;
+}
+.box {
+	display: block;
+	padding: 10px 0;
+	width: 100px;
+	background-color: #0084ff;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	-webkit-transition: all .5s 1s;
+	   -moz-transition: all .5s 1s;
+	    -ms-transition: all .5s 1s;
+	     -o-transition: all .5s 1s;
+	        transition: all .5s 1s;
+}
+.box:hover {
+	width: 300px;
+	background-color: #ffb400;
+	color: #000;
+}
+.apple {
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: url("images/apple.png") no-repeat 50% 50%;
+	opacity: .3;
+	transition: opacity .5s;
+}
+.apple:hover {
+	opacity: 0.6;
+}
+.apple:active {
+	opacity: 1;
+}
+.button {
+	display: inline-block;
+	padding: 10px;
+	border: 10px solid #fff;
+	border-radius: 100px;
+	background-image: -webkit-gradient(linear, left top, left bottom,
+		from(#fff),
+		color-stop(0.1, #ddd),
+		color-stop(0.6, #aaa),
+		to(#666)
+	);
+	box-shadow: rgba(0, 0, 0, 0.5) 0 1px 2px;
+	font-weight: bold;
+	color: #333;
+	text-shadow: rgba(255, 255, 255, 0.7) 0 1px 0;
+	transition: border-color 1s, font-size 5s;
+}
+.button:hover {
+	border-color: red;
+	padding: 10px 20px;
+	font-size: 1.5em;
+}
+</style>
+</head>
+<body>
+<h1>CSS3 Transition</h1>
+<div>
+	<a href="#" class="box">Box</a>
+</div>
+<div>
+	<a href="#" class="apple"></a>
+</div>
+<div>
+	<a href="#" class="button">Button</a>
+</div>
+</body>
+</html>

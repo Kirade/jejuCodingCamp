@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <style>
+        html {
+            font-size: 20px;
+        }
+
+        .menu {
+            
+        }
+
+        .menu a {
+            display: inline-block;
+            padding: 0.5em;
+            background: gray;
+            transition: all 0.5s;
+        }
+
+        .active {
+            transform: scale(1.5) rotate(-20deg);
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <a href="http://google.com" data-value="Home">Home</a>
+        <a href="http://daum.net" data-value="Products">Products</a>
+        <a href="#" data-value="Services">Services</a>
+        <a href="#" data-value="Contact">Contact</a>
+        <a href="#" data-value="About">About</a>
+        <span>asdadds</span>
+    </nav>
+
+    <script>
+        (function () {
+
+            var currentItem; // 현재 클릭된 객체를 넣어두는 용도
+
+            var menu = document.querySelector('.menu')
+            ;
+
+            function clickMenu (이벤트) {
+                if (이벤트.target.nodeName == 'A') {
+                    // 기본 동작(링크 이동) 취소하기
+                    이벤트.preventDefault();
+
+                    if (currentItem) {
+                        currentItem.classList.remove('active');
+                    }
+
+                    이벤트.target.classList.add('active');
+                    currentItem = 이벤트.target;
+
+                    console.log(currentItem.getAttribute('href') + '로 데이터 요청..');
+                }
+            }
+
+            menu.addEventListener('click', clickMenu);
+
+
+        })();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

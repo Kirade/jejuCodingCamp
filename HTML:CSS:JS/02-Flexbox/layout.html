@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flex Layout</title>
+	<meta charset="UTF-8">
+	<style>
+		html { height: 100%; }
+        body { min-height: 100%; -webkit-overflow-scrolling: touch; -webkit-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; }
+        html, body, div, span, applet, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; }
+        div, article, section, aside, nav, p, ul, ol, li, span, label { box-sizing: border-box; }
+
+		body {
+			background-color: #ddd;
+		}
+
+		.page {
+			width: 960px;
+			margin: 0 auto;
+			padding: 0 20px 20px;
+			border: 1px solid #ccc;
+			background-color: #fff;
+			box-shadow: rgba(0, 0, 0, 0.1) 0 2px 5px;
+		}
+
+		.global-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+			height: 100px;
+		}
+
+		.global-nav ul {
+            display: flex;
+		}
+
+		.global-nav li {
+            flex: 1;
+			list-style: none;
+			border: 1px solid #000;
+			background-color: #666;
+			min-width: 100px;
+            transition: all 0.5s;
+		}
+
+		.global-nav li:hover {
+			min-width: 300px;
+		}
+
+		.global-nav a {
+			display: block;
+			padding: 10px 0;
+			color: #fff;
+			text-align: center;
+			text-decoration: none;
+		}
+
+		.primary article {
+			padding: 20px 0;
+		}
+
+		.secondary {
+            display: flex;
+            justify-content: space-between;
+		}
+
+		.secondary aside {
+			width: 270px;
+			padding: 10px;
+			border: 1px solid #aaa;
+			background-color: #eee;
+		}
+	</style>
+</head>
+<body>
+<div class="page">
+	<header class="global-header">
+		<h1>Logo</h1>
+		<div>
+			<input type="search" placeholder="찾기">
+			<button>찾기</button>
+		</div>
+	</header>
+	<nav class="global-nav">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Travel</a></li>
+			<li><a href="#">Food</a></li>
+			<li><a href="#">Community</a></li>
+		</ul>
+	</nav>
+	<section class="primary">
+		<article>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac hendrerit lectus. Suspendisse et faucibus dui. Mauris euismod eros at nibh feugiat pharetra. Morbi sit amet eros felis. Sed libero justo, mattis vitae ultricies quis, porttitor nec orci. Quisque vel felis vel lectus faucibus luctus sit amet a urna. Cras sem mi, aliquam a tincidunt a, ornare quis sem. Nullam mi nulla, eleifend nec commodo vel, condimentum id odio. Maecenas vitae augue malesuada metus gravida pretium. Aliquam adipiscing, elit sit amet interdum convallis, erat enim placerat diam, interdum egestas lacus neque tristique eros.</p>
+			<p>In luctus, urna id rutrum dapibus, ipsum mauris hendrerit leo, quis semper mi dolor vitae neque. Integer egestas leo arcu, sed malesuada ipsum. Nam vitae enim vel lectus placerat volutpat id ut quam. Phasellus fringilla pellentesque tortor eget iaculis. Donec faucibus fringilla quam et bibendum. Nulla eleifend neque at augue tincidunt vestibulum. Ut sed odio eu felis interdum cursus. Nam sit amet vulputate libero. Maecenas eget metus at turpis commodo vestibulum. Pellentesque nec odio dolor. Proin in pretium nisi. Etiam blandit justo quis lacus rutrum tincidunt. Vivamus ac cursus arcu. Cras gravida orci eget arcu tempor dignissim. Donec arcu diam, pulvinar elementum iaculis in, bibendum non libero. Morbi vitae elit erat.</p>
+		</article>
+	</section>
+	<section class="secondary">
+		<aside>
+			<h1>aside 1</h1>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac hendrerit lectus. Suspendisse et faucibus dui. Mauris euismod eros at nibh feugiat pharetra. Morbi sit amet eros felis.
+		</aside>
+		<aside>
+			<h1>aside 2</h1>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac hendrerit lectus. Suspendisse et faucibus dui. Mauris euismod eros at nibh feugiat pharetra. Morbi sit amet eros felis.
+		</aside>
+		<aside>
+			<h1>aside 3</h1>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac hendrerit lectus. Suspendisse et faucibus dui. Mauris euismod eros at nibh feugiat pharetra. Morbi sit amet eros felis.
+		</aside>
+	</section>
+</div>
+</body>
+</html>

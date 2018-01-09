@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2단 레이아웃</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        body {
+            font-size: 14px;
+        }
+        .main-header {
+            padding: 5%;
+            background: gray;
+        }
+
+        .content-container {
+            /* width: 600px; */
+            /* background: url('images/bg1.png') repeat-y 0 0; */
+            background: url('images/bg2.png') repeat-y 30% 0;
+        }
+
+        .content-section {
+            float: left;
+            vertical-align: top;
+            width: 20%;
+            padding: 5%;
+            background: pink;
+        }
+
+        .content-section:nth-child(2) {
+            width: 60%;
+            background: yellow;
+        }
+
+        footer {
+            padding: 5%;
+            background: red;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        /* .content-section:nth-child(2n+1) {
+            background: yellow;
+        } */
+    </style>
+</head>
+<body>
+    <article class="container">
+
+        <header class="main-header">
+            <h1>
+                하이홈
+                <a href="http://google.com">Google</a>
+                <img src="images/ghost.png">
+            </h1>
+        </header>
+
+        <div class="content-container">
+            <section class="content-section">
+                <h2>섹션 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis nulla non tellus fermentum ornare. Nam vitae mauris sapien. Suspendisse at efficitur erat. Cras quis fermentum justo. Fusce semper, nisi sed eleifend tempor, quam metus tincidunt lorem, nec sollicitudin eros sapien vel nisl. Ut tortor ipsum, porta ut nisi et, interdum aliquet nunc. Sed eleifend tortor nisi, in ornare nisi sodales eget. Fusce imperdiet malesuada lacinia. Quisque consequat nunc ligula, id consequat purus finibus in.</p>
+            </section>
+
+            <section class="content-section">
+                <h2>섹션 2</h2>
+                <p>Vivamus urna ligula, facilisis at diam vitae, fermentum blandit eros. Donec eget pulvinar velit. Proin laoreet nunc elit, sed eleifend magna interdum quis. Etiam in varius quam. Aliquam nec dui non quam sodales sollicitudin non vel libero. Proin fringilla orci sit amet elementum bibendum. Pellentesque lacus tellus, tincidunt ut sagittis faucibus, egestas nec leo. Mauris interdum, turpis a maximus gravida, nulla nisi iaculis nisi, quis dignissim ex turpis vitae sem. Donec sed lacus at sem dictum vehicula. Fusce pellentesque, nisl eu accumsan efficitur, nunc ligula gravida erat, sed semper mi quam malesuada felis. Curabitur libero sapien, molestie quis cursus id, euismod nec purus. Curabitur ornare mauris ac enim commodo efficitur. Sed non eros lacinia, placerat purus a, lacinia ligula. Cras in leo sem. Praesent euismod diam at odio blandit suscipit. Mauris vitae semper neque, ultrices vehicula nisl. Phasellus dignissim at magna ut fermentum. Donec blandit vel quam sollicitudin consequat. Ut ultricies nisi sit amet ullamcorper gravida. Maecenas mollis molestie purus quis congue. Nullam finibus condimentum lacus, id faucibus ante interdum in. Mauris quis augue semper, euismod eros at, ornare sem. Curabitur sem diam, blandit eget felis in, iaculis consequat risus. Aenean hendrerit sodales felis vel accumsan.</p>
+            </section>
+
+            <div class="clear"></div>
+
+        </div>
+
+        <!-- <footer>
+            footer...
+        </footer> -->
+
+    </article>
+</body>
+</html>
